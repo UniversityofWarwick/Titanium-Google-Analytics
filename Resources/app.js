@@ -27,7 +27,11 @@ Titanium.App.Analytics = {
 	trackEvent:function(category, action, label, value){
 		Titanium.App.fireEvent('analytics_trackEvent', {category:category, action:action, label:label, value:value});
 	}
-}
+};
+
+analytics.setServerMode('LocalRemote');
+analytics.setLocalServer('http://www2.warwick.ac.uk');
+
 
 // Starts a new session as long as analytics.enabled = true
 // Function takes an integer which is the dispatch interval in seconds
